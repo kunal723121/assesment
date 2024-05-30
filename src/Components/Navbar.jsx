@@ -1,10 +1,8 @@
-import { useNavigate } from "react-router"
-import { useAuth } from "./Auth"
+import { useNavigate } from "react-router";
 let Navbar=()=>{
-    let{id,updateid}=useAuth()
     let nav=useNavigate()
     let btnhandler=()=>{
-        nav('/signup')
+        nav('/signin')
     }
     return <div>
         

@@ -11,7 +11,13 @@ let schema=mongoose.Schema({
     },
     password:{
         type:String,
-        require:true
+        require:true,
+        default:"xxxx"
+    },
+    googleid:{
+        type:String,
+        require:true,
+        default:"xxxx"
     }
 })
 let SIGN=mongoose.model("sign",schema)
