@@ -63,17 +63,17 @@ let Signup=()=>{
                          <input className="form-control"  onChange={updatehandler} name="password" required type="password" placeholder="enter your password..." ></input>
                     </div>
                 </form>
-                <button onClick={signuphandler} className="btn btn-primary">SignUp</button>
-                <h3>Already have account?<Link to="/signin">Signin</Link></h3>
-                <div className="mt-3">
-                            <GoogleOAuthProvider clientId="422396320187-q9uf07o3o89bgqmj8mm3i35a8tlc9t8l.apps.googleusercontent.com">
-                                <GoogleLogin
-                                    onSuccess={handleGoogleSuccess}
-                                    onFailure={handleGoogleFailure}
-                                    buttonText="Sign up with Google"
-                                />
-                            </GoogleOAuthProvider>
+                <div className="flex mb-2">
+                <button onClick={signuphandler} className="btn btn-primary mr-2">SignUp</button>
+                <h5 className="mt-2">Already have account ? <Link to="/signin">Signin</Link></h5>
                 </div>
+                    <GoogleOAuthProvider clientId="422396320187-q9uf07o3o89bgqmj8mm3i35a8tlc9t8l.apps.googleusercontent.com">
+                        <GoogleLogin
+                            onSuccess={handleGoogleSuccess}
+                            onFailure={handleGoogleFailure}
+                            buttonText="Sign up with Google"
+                        />
+                    </GoogleOAuthProvider>
                 </div>
             </div>
         </div>
