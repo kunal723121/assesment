@@ -7,16 +7,16 @@ let signRouter=Express.Router()
 
 // http://localhost:8080/user/login
 signRouter.post('/login',async(req,resp)=>{
-    let {name,email,password}=req.body
+    let {email,password}=req.body
     let newpassword
     let user=await SIGN.findOne({email:email})
-    if(user)
+    if(user && user.password!="xxxx")
     {
         jwt.verify(user.password,key,(err,data)=>{
             if(err) throw err
             newpassword=data
         })
-        console.log(password,email,name)
+        console.log(password,email)
         let nuser=await SIGN.findOne({email:email})
         if(nuser && password===newpassword)
         {
@@ -26,6 +26,10 @@ signRouter.post('/login',async(req,resp)=>{
         {
             return resp.send({"msg":0})
         }
+    }
+    else if(user && user.password==="xxxx")
+    {
+        return resp.send({"msg":3})
     }
     else
     {
@@ -39,13 +43,20 @@ signRouter.post('/register',async(req,resp)=>{
     let user=await SIGN.findOne({email:email})
     if(user)
     {
-       return resp.send({"msg":"Email id already exist"})
+        if(user && user.password==="xxxx")
+        {
+            return resp.send({"msg":"Email already registered with google,plz sign with google"})
+        }
+        else
+        {
+            return resp.send({"msg":"Email already exist"})
+        }
     }
     jwt.sign(password,key,(err,data)=>{
         let password=data
         let newuser=new SIGN({name,email,password})
         newuser.save()
-        resp.send({"msg":"done"})
+        resp.send({"msg":"Signup done"})
     })
 })
 

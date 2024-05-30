@@ -24,13 +24,13 @@ let Navbar=()=>{
                 <h2 className="mt-4">Build projects.</h2>
                 <h2 className="mt-4">Earn certifications.</h2>
                 <h6 className="mt-5">since 2014,morethan 40,000 freeCodeCamp.org graduates have gotten jobs at tech companies includes:</h6>
-                
-                <ul className="navbar-nav navbar-expand-lg">
-                    <li><img width="100rem" className="mt-3" height="70rem" src="https://logowik.com/content/uploads/images/t_640_apple.jpg" /></li>
-                    <li><img className="mt-4" width="100rem" height="70rem" src="https://images.hindustantimes.com/img/2022/09/11/1600x900/gd_1662870108818_1662870128181_1662870128181.png" /></li>
-                    <li><img className="ml-4 mt-4" width="100rem" height="70rem" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4lN71xnkBArg2_0rfEFpfJ7zVeGGcx2TllJTGOXF6XA&s" /></li>
-                    <li><img width="130rem" className="ml-4" height="110rem" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4g0eRyE1F7qCb6CDCXGYQJ_hm5n2BmPZcdQ&s" /></li>
-                </ul>
+                <div className="flex">
+                <img width="80rem" className="mt-3" height="67rem" src="https://logowik.com/content/uploads/images/t_640_apple.jpg" />
+                    <img className="mt-4 ml-3" width="80rem" height="70rem" src="https://images.hindustantimes.com/img/2022/09/11/1600x900/gd_1662870108818_1662870128181_1662870128181.png" />
+                    <img className="ml-5 mt-4" width="90rem" height="65rem" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4lN71xnkBArg2_0rfEFpfJ7zVeGGcx2TllJTGOXF6XA&s" />
+                    <img width="100rem" className="ml-5" height="110rem" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4g0eRyE1F7qCb6CDCXGYQJ_hm5n2BmPZcdQ&s" />
+                    <img width="100rem" className="ml-5 mt-m" height="40rem" src="https://pngimg.com/d/amazon_PNG20.png" />
+                </div>
                 
                 <button className="btn btn-yellow width mt-3 ml-8">Get started(it's free)</button>
                 
