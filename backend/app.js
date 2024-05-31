@@ -11,6 +11,9 @@ app.use(cors())
 app.use(Express.json());
 app.use(Express.urlencoded({ extended: true }));
 app.use('/user',signRouter)
+app.get('/',(req,resp)=>{
+    resp.send({hello})
+})
 
 mongoose.connect(process.env.MONGO_URL).then(()=>{
     console.log("running")
