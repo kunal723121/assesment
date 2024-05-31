@@ -18,7 +18,7 @@ mongoose.connect(process.env.MONGO_URL).then(()=>{
     console.log("err")
 })
 
-app.listen(4000,(err)=>{
+app.listen(10000,(err)=>{
     if(err) throw err
     console.log("server is connected")
 })
