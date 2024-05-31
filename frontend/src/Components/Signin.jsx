@@ -21,7 +21,7 @@ let Signin=()=>{
         if (!data.email.match(/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/)) {
             return alert("Please enter a valid email");
         }
-        Axios.post('http://localhost:8020/user/login',data).then((resp)=>{
+        Axios.post('assesment-dusky-eight.vercel.app/login',data).then((resp)=>{
             if(resp.data.msg===1)
             {
                 alert("Signin success");
@@ -48,7 +48,7 @@ let Signin=()=>{
         // console.log('Google Login Success:', userObject)
 
         // Send the Google user details to your backend to register or login
-        Axios.post('http://localhost:8020/user/google-login', {
+        Axios.post('assesment-dusky-eight.vercel.app/google-login', {
             email: userObject.email,
             name: userObject.name,
             googleid: userObject.sub
