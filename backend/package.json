@@ -5,8 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"nodemon app.js",
-    "build":"npm i"
+    "start": "nodemon app.js",
+    "build": "npm i"
   },
   "keywords": [],
   "author": "",
@@ -18,6 +18,7 @@
     "google-auth-library": "^9.10.0",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.4.0",
-    "nodemon": "^3.1.1"
+    "nodemon": "^3.1.1",
+    "vercel": "^34.2.4"
   }
 }
