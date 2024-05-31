@@ -16,7 +16,7 @@ app.get('/',(req,resp)=>{
 })
 
 mongoose.connect(process.env.MONGO_URL).then(()=>{
-    console.log("running")
+    console.log("db connected")
 }).catch(()=>{
     console.log("err")
 })
