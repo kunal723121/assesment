@@ -22,7 +22,7 @@ let Signup=()=>{
         if (!data.email.match(/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/)) {
             return alert("Please enter a valid email");
         }
-        Axios.post('http://localhost:8123/user/register',data).then((resp)=>{
+        Axios.post('http://localhost:8020/user/register',data).then((resp)=>{
             alert(resp.data.msg)
         }).catch()
     }
@@ -31,7 +31,7 @@ let Signup=()=>{
         console.log('Google Login Success:', userObject)
 
         // Send the Google user details to your backend to register or login
-        Axios.post('http://localhost:8123/user/google-login', {
+        Axios.post('http://localhost:8020/user/google-login', {
             email: userObject.email,
             name: userObject.name,
             googleid: userObject.sub

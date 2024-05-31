@@ -14,7 +14,7 @@ mongoose.connect("mongodb://localhost:27017/assesment").then(()=>{
     console.log("err")
 })
 
-app.listen(8123,(err)=>{
+app.listen(8020,(err)=>{
     if(err) throw err
     console.log("server is connected")
 })
